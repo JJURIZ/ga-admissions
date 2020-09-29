@@ -1,15 +1,21 @@
 /* GLOBAL SETTINGS */
 html {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
 body {
   margin: 0;
-  font-family: 'Poppins', sans-serif;
-  }
+  font-family: "Poppins", sans-serif;
+}
 
 /* PICTURE AND TEXT */
 .container__header-title-img {
-  background-image: linear-gradient(to right, rgba(59, 86, 89, .3), rgba(169, 208, 217, .9), rgba(242, 48, 48, .3));
+  background-image: linear-gradient(
+    to right,
+    rgba(59, 86, 89, 0.3),
+    rgba(169, 208, 217, 0.9),
+    rgba(242, 48, 48, 0.3)
+  );
 }
 
 .img__self-portrait {
@@ -19,7 +25,7 @@ body {
   align-items: center;
 }
 
-.name, 
+.name,
 .title {
   animation-duration: 3s;
   margin: 0 0;
@@ -30,19 +36,19 @@ body {
 .name {
   animation-name: moveInRight;
   padding: 2rem 0 2rem 0;
-  letter-spacing: .2rem;
+  letter-spacing: 0.2rem;
   font-weight: 400;
 }
 
 .title {
   animation-name: moveInLeft;
   padding: 2rem 0 2rem 0;
-  font-weight:300;
-  letter-spacing: .1rem;
+  font-weight: 300;
+  letter-spacing: 0.1rem;
 }
 
 button {
-  background-color: #3B5659;
+  background-color: #3b5659;
   border: none;
   border-radius: 10px;
   color: white;
@@ -54,7 +60,7 @@ button {
 }
 
 button:hover {
-  background-color: rgba(59, 86, 89, .5);
+  background-color: rgba(59, 86, 89, 0.5);
 }
 
 button:last-child {
@@ -75,8 +81,7 @@ button:last-child {
 .about-me-s,
 .about-me-a,
 .about-me-i,
-.about-me-l
- {
+.about-me-l {
   border-radius: 10px;
   padding: 0 2.5rem 0 2.5rem;
 }
@@ -84,8 +89,7 @@ button:last-child {
 .s__grid,
 .a__grid,
 .i__grid,
-.l__grid
- {
+.l__grid {
   font-weight: 400;
   font-size: 3rem;
   text-transform: uppercase;
@@ -109,28 +113,28 @@ button:last-child {
 }
 
 .about-me-s {
-  background-color: rgba(0,0,0, .4);
+  background-color: rgba(0, 0, 0, 0.4);
   grid-row: 1;
   grid-column: 1;
   margin: 20px 0 0 20px;
 }
 
 .about-me-a {
-  background-color: rgba(0,0,0, .4);
+  background-color: rgba(0, 0, 0, 0.4);
   grid-row: 1;
   grid-column: 2;
   margin: 20px 20px 0 0;
 }
 
 .about-me-i {
-  background-color: rgba(0,0,0, .4);
+  background-color: rgba(0, 0, 0, 0.4);
   grid-row: 2;
   grid-column: 1;
   margin: 0 0 20px 20px;
 }
 
 .about-me-l {
-  background-color: rgba(0,0,0, .4);
+  background-color: rgba(0, 0, 0, 0.4);
   grid-row: 2;
   grid-column: 2;
   margin: 0 20px 20px 0;
@@ -138,7 +142,12 @@ button:last-child {
 
 /* CONTACT INFORMATION */
 .container__contact-me {
-  background-image: linear-gradient(to right, rgba(59, 86, 89, .3), rgba(169, 208, 217, .9), rgba(242, 48, 48, .3));
+  background-image: linear-gradient(
+    to right,
+    rgba(59, 86, 89, 0.3),
+    rgba(169, 208, 217, 0.9),
+    rgba(242, 48, 48, 0.3)
+  );
   height: 45vh;
   display: flex;
   justify-content: space-around;
@@ -152,7 +161,7 @@ button:last-child {
 
 .me__online {
   width: 45%;
-  margin: 0px 20px 0 0 ;
+  margin: 0px 20px 0 0;
 }
 
 .online__links-heading {
@@ -163,7 +172,6 @@ button:last-child {
 .online__links {
   list-style: none;
   cursor: pointer;
-
 }
 
 .online__links li a {
@@ -171,7 +179,6 @@ button:last-child {
   text-decoration: none;
   font-size: 2rem;
 }
-
 
 footer {
   font-size: 2rem;
@@ -182,133 +189,102 @@ footer {
 /* ANIMATIONS */
 @keyframes moveInRight {
   0% {
-      opacity: 0;
-      transform: translateX(-10rem);
+    opacity: 0;
+    transform: translateX(-10rem);
   }
 
   100% {
-      opacity: 1;
-      transform: translate(0);
+    opacity: 1;
+    transform: translate(0);
   }
 }
 
 @keyframes moveInLeft {
   0% {
-      opacity: 0;
-      transform: translateX(10rem);
+    opacity: 0;
+    transform: translateX(10rem);
   }
 
   100% {
-      opacity: 1;
-      transform: translate(0);
+    opacity: 1;
+    transform: translate(0);
   }
 }
 
 /* MEDIA QUERIES */
+@media screen and (max-width: 1400px) {
+}
+
 @media screen and (max-width: 800px) {
   body {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
   }
 
   .img__self-portrait-me {
     max-width: 250px;
     max-height: 250px;
   }
-  .name, 
+  .name,
   .title {
     font-size: 2rem;
   }
 
+  .container__about-me {
+    display: flex;
+    height: 100%;
+  }
 
-.about-me-s,
-.about-me-a,
-.about-me-i,
-.about-me-l
- {
-  border-radius: 5px;
-  padding: 0 0.5rem 0 0.5rem;
-}
+  .s__grid,
+  .a__grid,
+  .i__grid,
+  .l__grid {
+    font-size: .75rem;
+    width: 100%;
+  }
 
-.s__grid,
-.a__grid,
-.i__grid,
-.l__grid
- {
-  font-size: 1.5rem;
-  width: 100%;
-}
+  .s,
+  .a,
+  .i,
+  .l {
+    font-size: .75rem;
+  }
 
-.s,
-.a,
-.i,
-.l {
-  font-size: 1.5rem;
-}
+  .s__paragraph,
+  .a__paragraph,
+  .i__paragraph,
+  .l__paragraph {
+    font-size: .6rem;
+  }
 
-.s__paragraph,
-.a__paragraph,
-.i__paragraph,
-.l__paragraph {
-  font-size: 1rem;
-}
+  .about-me-s,
+  .about-me-a,
+  .about-me-i,
+  .about-me-l {
+    margin: 0;
+  }
 
-.about-me-s {
-  margin: 5px 0 0 5px;
-}
+  /* CONTACT INFORMATION */
+  .container__contact-me {
+    height: 60vh;
+  }
 
-.about-me-a {
-  margin: 5px 5px 0 0;
-}
+  .online__links-heading {
+    font-weight: 400;
+    font-size: 1rem;
+  }
+  .online__links {
+    list-style: none;
+    cursor: pointer;
+  }
 
-.about-me-i {
-  margin: 0 0 5px 5px;
-}
+  .online__links li a {
+    font-size: .6rem;
+  }
 
-.about-me-l {
-  margin: 0 5px 5px 0;
-}
-
-/* CONTACT INFORMATION */
-
-.me__contact {
-  width: 100%;
-  margin: 0px 0 0 20px;
-}
-
-.me__online {
-  width: 45%;
-  margin: 0px 20px 0 0 ;
-}
-
-.me__contact {
-  width: 45%;
-  margin: 0px 0 0 5px;
-}
-
-.me__online {
-  width: 45%;
-  margin: 0px 0px 0 5px;
-}
-
-.online__links-heading {
-  margin-top: 2rem;
-  font-weight: 400;
-  font-size: 2rem;
-}
-.online__links {
-  list-style: none;
-  cursor: pointer;
-
-}
-
-.online__links li a {
-  font-size: 1rem;
-}
-
-
-footer {
-  font-size: 1rem;
-}
-
+  footer {
+    font-size: .6rem;
+  }
 }

@@ -1,0 +1,225 @@
+/* GLOBAL SETTINGS */
+html {
+  box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  }
+
+/* PICTURE AND TEXT */
+.container__header-title-img {
+  background-image: linear-gradient(to right, rgba(59, 86, 89, .3), rgba(169, 208, 217, .9), rgba(242, 48, 48, .3));
+}
+
+.img__self-portrait {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.name, 
+.title {
+  animation-duration: 3s;
+  margin: 0 0;
+  text-transform: uppercase;
+  font-size: 5rem;
+}
+
+.name {
+  animation-name: moveInRight;
+  padding: 2rem 0 2rem 0;
+  letter-spacing: .2rem;
+  font-weight: 400;
+}
+
+.title {
+  animation-name: moveInLeft;
+  padding: 2rem 0 2rem 0;
+  font-weight:300;
+  letter-spacing: .1rem;
+}
+
+button {
+  background-color: #3B5659;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  height: 50px;
+  width: 120px;
+  margin: 5px;
+  cursor: pointer;
+  outline: none;
+}
+
+button:hover {
+  background-color: rgba(59, 86, 89, .5);
+}
+
+button:last-child {
+  margin-bottom: 10px;
+}
+
+/* ABOUT ME SECTION */
+.container__about-me {
+  background: url(./assets/images/sail.jpg);
+  background-size: cover;
+  height: 80vh;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px 20px;
+}
+
+.about-me-s,
+.about-me-a,
+.about-me-i,
+.about-me-l
+ {
+  border-radius: 10px;
+  padding: 0 2.5rem 0 2.5rem;
+}
+
+.s__grid,
+.a__grid,
+.i__grid,
+.l__grid
+ {
+  font-weight: 400;
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+
+.s,
+.a,
+.i,
+.l {
+  font-weight: 400;
+  font-size: 4rem;
+  text-decoration: underline;
+}
+
+.s__paragraph,
+.a__paragraph,
+.i__paragraph,
+.l__paragraph {
+  font-size: 1.5rem;
+  color: white;
+}
+
+.i__paragraph,
+.l__paragraph {
+
+}
+.about-me-s {
+  background-color: rgba(0,0,0, .4);
+  grid-row: 1;
+  grid-column: 1;
+  margin: 20px 0 0 20px;
+}
+
+.about-me-a {
+  background-color: rgba(0,0,0, .4);
+  grid-row: 1;
+  grid-column: 2;
+  margin: 20px 20px 0 0;
+}
+
+.about-me-i {
+  background-color: rgba(0,0,0, .4);
+  grid-row: 2;
+  grid-column: 1;
+  margin: 0 0 20px 20px;
+}
+
+.about-me-l {
+  background-color: rgba(0,0,0, .4);
+  grid-row: 2;
+  grid-column: 2;
+  margin: 0 20px 20px 0;
+}
+
+/* CONTACT INFORMATION */
+.container__contact-me {
+  background-image: linear-gradient(to right, rgba(59, 86, 89, .3), rgba(169, 208, 217, .9), rgba(242, 48, 48, .3));
+  height: 45vh;
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+}
+
+.me__contact {
+  width: 45%;
+  margin: 0px 0 0 20px;
+}
+
+.me__online {
+  width: 45%;
+  margin: 0px 20px 0 0 ;
+}
+
+.online__links-heading {
+  margin-top: 2rem;
+  font-weight: 400;
+  font-size: 4rem;
+}
+.online__links {
+  list-style: none;
+  cursor: pointer;
+
+}
+
+.online__links li a {
+  color: black;
+  text-decoration: none;
+  font-size: 2rem;
+}
+
+
+footer {
+  font-size: 2rem;
+  position: absolute;
+  bottom: 0;
+}
+
+/* ANIMATIONS */
+@keyframes moveInRight {
+  0% {
+      opacity: 0;
+      transform: translateX(-10rem);
+  }
+
+  100% {
+      opacity: 1;
+      transform: translate(0);
+  }
+}
+
+@keyframes moveInLeft {
+  0% {
+      opacity: 0;
+      transform: translateX(10rem);
+  }
+
+  100% {
+      opacity: 1;
+      transform: translate(0);
+  }
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 800px) {
+  .img__self-portrait-me {
+    max-width: 250px;
+    max-height: 250px;
+  }
+
+
+  .container__about-me {
+    height: 50vh;
+  }
+
+  .container__contact-me {
+    height: 50vh;
+}

@@ -108,10 +108,6 @@ button:last-child {
   color: white;
 }
 
-.i__paragraph,
-.l__paragraph {
-
-}
 .about-me-s {
   background-color: rgba(0,0,0, .4);
   grid-row: 1;
@@ -210,16 +206,109 @@ footer {
 
 /* MEDIA QUERIES */
 @media screen and (max-width: 800px) {
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+
   .img__self-portrait-me {
     max-width: 250px;
     max-height: 250px;
   }
-
-
-  .container__about-me {
-    height: 50vh;
+  .name, 
+  .title {
+    font-size: 2rem;
   }
 
-  .container__contact-me {
-    height: 50vh;
+
+.about-me-s,
+.about-me-a,
+.about-me-i,
+.about-me-l
+ {
+  border-radius: 5px;
+  padding: 0 0.5rem 0 0.5rem;
+}
+
+.s__grid,
+.a__grid,
+.i__grid,
+.l__grid
+ {
+  font-size: 1.5rem;
+  width: 100%;
+}
+
+.s,
+.a,
+.i,
+.l {
+  font-size: 1.5rem;
+}
+
+.s__paragraph,
+.a__paragraph,
+.i__paragraph,
+.l__paragraph {
+  font-size: 1rem;
+}
+
+.about-me-s {
+  margin: 5px 0 0 5px;
+}
+
+.about-me-a {
+  margin: 5px 5px 0 0;
+}
+
+.about-me-i {
+  margin: 0 0 5px 5px;
+}
+
+.about-me-l {
+  margin: 0 5px 5px 0;
+}
+
+/* CONTACT INFORMATION */
+
+.me__contact {
+  width: 100%;
+  margin: 0px 0 0 20px;
+}
+
+.me__online {
+  width: 45%;
+  margin: 0px 20px 0 0 ;
+}
+
+.me__contact {
+  width: 45%;
+  margin: 0px 0 0 5px;
+}
+
+.me__online {
+  width: 45%;
+  margin: 0px 0px 0 5px;
+}
+
+.online__links-heading {
+  margin-top: 2rem;
+  font-weight: 400;
+  font-size: 2rem;
+}
+.online__links {
+  list-style: none;
+  cursor: pointer;
+
+}
+
+.online__links li a {
+  font-size: 1rem;
+}
+
+
+footer {
+  font-size: 1rem;
+}
+
 }
